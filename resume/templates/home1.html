@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Homepage Title{% endblock %}
+
+{% block content %}
+
+<h1>This is my homie page...</h1>
+<br/><br/>
+<h2>...and homie don't play dat.</h2>
+
+<br/>
+<img src="{% static 'resume_static/images/calvin-and-hobbes.jpg' %}" width="500">
+<br/><br/>
+<button onclick="myfunction()"type="button" class="btn btn-success">Push The Button, y'tart!</button>
+<br/><br>
+{% for x in names %}
+	{{ x }}<br/>
+	{% endfor %}
+<script src= "{% static 'resume_static/javascript/popup.js' %}"></script>
+<br/><br/>
+{{ namer }}
+
+<br/><br/>{% include 'snippets/snip_1.html' %}
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}About-me Title{% endblock %}
+
+
+
+{% block content %}
+
+<br/>This is my ABOUT page...<br/><br/>
+...and I ain't telling you anything.
+<br/><br/>
+~{{first_name | capfirst}} {{last_name |upper}} 
+<br/>{{ today_date|date:"D d M Y" }}
+
+<br/><br/>
+{% if first_name == "Gargamel"%}
+	Hello, {{ first_name}}!
+{% else %}
+	Hello, stranger
+{% endif %}
+
+{% endblock %}
